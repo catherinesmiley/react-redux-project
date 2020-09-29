@@ -11,7 +11,7 @@ import { testReducer } from './reducers/testReducer'
 
 const store = createStore(
     testReducer,
-    composeWithDevTools(testReducer, applyMiddleware(thunk))
+    composeWithDevTools(applyMiddleware(thunk))
 )
 
 ReactDOM.render(
