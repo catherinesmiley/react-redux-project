@@ -7,6 +7,7 @@ class App extends Component {
     componentDidMount() {
         console.log("props", this.props)
         this.props.fetchCategories()
+        console.log("props now", this.props)
     }
 
     render() {
