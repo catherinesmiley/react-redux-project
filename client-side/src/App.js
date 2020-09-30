@@ -5,18 +5,29 @@ import { fetchCategories } from './actions/categories'
 class App extends Component {
 
     componentDidMount() {
-        console.log("props", this.props)
+        console.log(this.props)
         this.props.fetchCategories()
-        console.log("props now", this.props)
     }
 
     render() {
+        let categories = this.props.categories.map((category, index) => 
+            <div key={index}>
+                <h2>{category.name}</h2>
+                <h4>{category.description}</h4>
+            </div>
+        )
         return (
             <div>
-                hi!!!!!!
+                {categories}
             </div>
         );
     }
 }
 
-export default connect(null, { fetchCategories })(App);
+const mapStateToProps = state => {
+    return {
+        categories: state.categories
+    }
+}
+
+export default connect(mapStateToProps, { fetchCategories })(App);
