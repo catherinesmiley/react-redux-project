@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { fetchCategories } from './actions/categories'
 
 class App extends Component {
+
+    componentDidMount() {
+        console.log("props", this.props)
+        this.props.fetchCategories()
+    }
+
     render() {
         return (
             <div>
@@ -10,4 +18,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default connect(null, { fetchCategories })(App);
