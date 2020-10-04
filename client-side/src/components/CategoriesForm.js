@@ -13,10 +13,15 @@ class CategoriesForm extends Component {
         })
     }
 
+    handleOnSubmit = event => {
+        event.preventDefault()
+        // create add category action, add as prop, and call here
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={event => this.handleOnSubmit(event)}>
                     <input 
                         type="text" 
                         placeholder="Checklist name"
