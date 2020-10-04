@@ -24,6 +24,15 @@ class CategoriesForm extends Component {
                         onChange={this.handleOnChange}
                         value={this.state.name}
                     />
+                    <br />
+                    <input 
+                        type="text" 
+                        placeholder="Checklist description"
+                        name="description"
+                        onChange={this.handleOnChange}
+                        value={this.state.description}
+                    />
+                    <br />
                     <input type="submit" value="Create new checklist"/>
                 </form>
             </div>
