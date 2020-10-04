@@ -15,7 +15,7 @@ class CategoriesContainer extends Component {
                 <h2>{category.name}</h2>
                 <h4>{category.description}</h4>
                 <ul>
-                    <li>{category.items.name}</li>
+                    {/* render each item */}
                 </ul>
             </div>
         )
