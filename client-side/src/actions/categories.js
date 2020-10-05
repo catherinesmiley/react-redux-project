@@ -6,3 +6,11 @@ export const fetchCategories = () => {
         .then(responseJSON => dispatch({ type: 'ADD_CATEGORIES', categories: responseJSON }))
     }
 }
+
+export const addCategory = category => {
+    console.log("category in action", category)
+    return {
+        type: 'ADD_CATEGORY',
+        category
+    }
+}
