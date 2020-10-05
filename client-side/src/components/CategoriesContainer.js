@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categories'
+import CategoriesForm from './CategoriesForm'
+import Categories from './Categories'
 
 class CategoriesContainer extends Component {
 
@@ -9,28 +11,21 @@ class CategoriesContainer extends Component {
     }
 
     render() {
-        console.log("categories in render", this.props.categories)
-        let categories = this.props.categories.map((category, index) => 
-            <div key={index}>
-                <h2>{category.name}</h2>
-                <h4>{category.description}</h4>
-                <ul>
-                    {/* render each item */}
-                </ul>
-            </div>
-        )
         return (
             <div>
-                {categories}
+                <CategoriesForm categories={this.props.categories} />
+                <Categories categories={this.props.categories} />
             </div>
         );
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        categories: state.categories
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         categories: state.categories
+//     }
+// }
+
+const mapStateToProps = ({ categories }) => ({ categories })
 
 export default connect(mapStateToProps, { fetchCategories })(CategoriesContainer);
