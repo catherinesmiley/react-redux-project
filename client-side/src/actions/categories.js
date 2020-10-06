@@ -8,6 +8,7 @@ export const fetchCategories = () => {
 }
 
 // let nextCategoryId = 0
+// fetch post request
 export const addCategory = category => {
     console.log("category in action", category)
     return {
