@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categories'
-import CategoriesForm from './CategoriesForm'
 import Categories from './Categories'
 
 class CategoriesContainer extends Component {
@@ -13,7 +12,6 @@ class CategoriesContainer extends Component {
     render() {
         return (
             <div>
-                <CategoriesForm categories={this.props.categories} />
                 <Categories categories={this.props.categories} />
             </div>
         );
