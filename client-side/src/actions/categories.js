@@ -7,10 +7,12 @@ export const fetchCategories = () => {
     }
 }
 
+// let nextCategoryId = 0
 export const addCategory = category => {
     console.log("category in action", category)
     return {
         type: 'ADD_CATEGORY',
+        // id: nextCategoryId++,
         category
     }
 }
