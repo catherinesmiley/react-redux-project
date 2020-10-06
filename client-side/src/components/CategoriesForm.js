@@ -17,7 +17,6 @@ class CategoriesForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        // create add category action, add as prop, and call here
         const category = {
             name: this.state.name,
             description: this.state.description
