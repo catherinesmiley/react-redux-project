@@ -8,10 +8,10 @@ export const fetchCategories = () => {
 }
 
 // let nextCategoryId = 2
-// fetch post request
 export const addCategory = category => {
     console.log("category in action", category)
     return dispatch => {
+        // is this dispatch needed?
         dispatch({ type: 'LOADING_CATEGORIES' })
         fetch('http://localhost:3090/categories', {
             method: "POST",
@@ -23,8 +23,6 @@ export const addCategory = category => {
         })
         .then(resp => resp.json())
         .then(responseJSON => dispatch({ type: 'ADD_CATEGORY', category}))
-        // type: 'ADD_CATEGORY',
-        // // id: nextCategoryId++,
-        // category
+        // id: nextCategoryId++,
     }
 }

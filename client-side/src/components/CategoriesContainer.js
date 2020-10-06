@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/categories'
+import { Switch, Route } from 'react-router-dom'
 import Categories from './Categories'
+import Category from './Category'
+import CategoriesForm from './CategoriesForm'
 
 class CategoriesContainer extends Component {
 
@@ -12,7 +15,13 @@ class CategoriesContainer extends Component {
     render() {
         return (
             <div>
-                <Categories categories={this.props.categories} />
+                {/* <Categories categories={this.props.categories} /> */}
+                <Switch>
+                    <Route exact path="/categories" render={(props) => <Categories {...props} categories={this.props.categories} />} />
+                    <Route exact path="/categories/new" component={CategoriesForm} />
+                    <Route exact path="/categories/:id" render={(props) => <Category {...props} categories={this.props.categories} />} />
+                </Switch>
+                {/* create routes in container component when they're nested */}
             </div>
         );
     }
