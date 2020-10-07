@@ -6,10 +6,10 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import App from './App'
-import { categoriesReducer } from './reducers/categoriesReducer'
+import { rootReducer } from './reducers/rootReducer'
 
 const store = createStore(
-    categoriesReducer,
+    rootReducer,
     composeWithDevTools(applyMiddleware(thunk))
 )
 
