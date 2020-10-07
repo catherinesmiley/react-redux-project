@@ -4,10 +4,13 @@ import { addItem } from '../actions/items'
 
 class ItemsForm extends Component {
 
-    state = {
-        name: "", 
-        // category_id: ""
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: "", 
+            category_id: this.props.categoryID
     }
+}
 
     handleOnChange = event => {
         this.setState({
@@ -18,11 +21,12 @@ class ItemsForm extends Component {
     handleOnSubmit = event => {
         event.preventDefault()
         const item = {
-            name: this.state.name
+            name: this.state.name,
             // add id?
-            // add id of associated category?
+            category_id: this.props.categoryID
         }
         console.log("item on submit", item)
+        this.props.addItem(item)
     }
 
     render() {
