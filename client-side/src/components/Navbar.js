@@ -19,6 +19,7 @@ const Navbar = () => {
                 exact
             >Create New Category</NavLink>
             <br />
+            <br />
         </div>
     );
 };

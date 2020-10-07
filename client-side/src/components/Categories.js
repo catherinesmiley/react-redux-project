@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, Switch, Route } from 'react-router-dom'
-import Category from './Category'
+import { Link } from 'react-router-dom'
 
 const Categories = props => {
     const categories = props.categories.map((category, index) => {
@@ -10,11 +9,6 @@ const Categories = props => {
                 to={`/categories/${category.id}`}
             ><h2>{category.name}</h2></Link>
             <h4>{category.description}</h4>
-            {/* add conditional for categories without items  */}
-            {/* {category.items.map(function(item, index) {
-                return (<li key={index}>{item.name}</li>)
-            })}            */}
-            {/* ternary - if no items, render "no items" text - put on category show page */}
         </div>
     })
 

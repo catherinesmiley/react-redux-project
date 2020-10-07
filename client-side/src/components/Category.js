@@ -10,6 +10,10 @@ const Category = ({ match, categories }) => {
     return (
         <div>
             {category.name}
+            {category.items.map(function(item, index) {
+                return (<li key={index}>{item.name}</li>)
+            })}           
+            {/* ternary - if no items, render "no items" text */}
         </div>
     );
 };
