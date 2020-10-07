@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemsForm from './ItemsForm'
 
 const Category = ({ match, categories }) => {
     // destructure - go through the state of our categories and filter out the category with an id of our match
@@ -8,6 +9,7 @@ const Category = ({ match, categories }) => {
     // when you do a refresh it doesn't remember the props - categories container no longer being mounted, only category is
     // this interferes with the rerender so this component maintains its props
     return (
+        <>
         <div>
             {category.name}
             {category.items.map(function(item, index) {
@@ -15,6 +17,10 @@ const Category = ({ match, categories }) => {
             })}           
             {/* ternary - if no items, render "no items" text */}
         </div>
+        <div>
+            <ItemsForm />
+        </div>
+        </>
     );
 };
 

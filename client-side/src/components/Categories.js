@@ -8,17 +8,14 @@ const Categories = props => {
             <Link
                 to={`/categories/${category.id}`}
             ><h2>{category.name}</h2></Link>
+            {/* conditional if no category name */}
+            {/* add validations to category model */}
             <h4>{category.description}</h4>
         </div>
     })
 
     return (
-        <div>
-        {categories}
-        {/* <Switch>
-            <Route exact path="/categories/:id" render={(props) => <Category {...props} categories={props.categories} />} />
-        </Switch> */}
-        </div>
+        <div>{categories}</div>
     );
 };
 
