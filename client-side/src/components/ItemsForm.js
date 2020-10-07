@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { addItem } from '../actions/items'
 
 class ItemsForm extends Component {
 
@@ -43,4 +44,4 @@ class ItemsForm extends Component {
     }
 }
 
-export default ItemsForm;
+export default connect(null, { addItem })(ItemsForm);
