@@ -6,7 +6,7 @@ const CategoryItems = props => {
     return (
         <div>
             {items.map(function(item, index) {
-                return (<li key={item.id}>{item.name}<button onClick={() => props.deleteItem(item.id)}>x</button></li>)
+                return (<li key={item.id}>{item.name}<button onClick={() => props.deleteItem(item)}>x</button></li>)
                 // <button onClick={() => props.delete(item.id)}>x</button>
             })}    
         </div>
