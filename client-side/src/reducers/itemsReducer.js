@@ -1,10 +1,9 @@
 export const itemsReducer = (state = { items: [], loading: false }, action) => {
     switch (action.type) {
-        case 'LOADING_ITEMS': 
+        case 'FETCH_ITEMS': 
             return {
                 ...state,
-                items: [...state.items],
-                loading: true
+                items: action.items
             }
         case 'ADD_ITEM': 
         console.log("action in add item", action)

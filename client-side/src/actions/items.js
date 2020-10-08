@@ -1,6 +1,6 @@
 export const addItem = item => {
     return dispatch => {
-        dispatch({ type: 'LOADING_ITEMS '})
+        // dispatch({ type: 'LOADING_ITEMS '})
         fetch('http://localhost:3090/items', {
             method: "POST",
             headers: {

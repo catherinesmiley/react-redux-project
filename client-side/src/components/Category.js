@@ -1,5 +1,7 @@
 import React from 'react';
-import ItemsForm from './ItemsForm'
+// import ItemsForm from './ItemsForm'
+// import CategoryItems from './CategoryItems'
+import ItemsContainer from './ItemsContainer'
 
 const Category = ({ match, categories }) => {
     // destructure - go through the state of our categories and filter out the category with an id of our match
@@ -12,13 +14,8 @@ const Category = ({ match, categories }) => {
         <>
         <div>
             {category.name}
-            {category.items.map(function(item, index) {
-                return (<li key={index}>{item.name}</li>)
-            })}           
+            <ItemsContainer category={category}/>
             {/* ternary - if no items, render "no items" text */}
-        </div>
-        <div>
-            <ItemsForm categoryID={category.id}/>
         </div>
         </>
     );
