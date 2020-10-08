@@ -24,7 +24,7 @@ class CategoriesContainer extends Component {
             </div>
         );
     }
-}
+}   
 
 const mapStateToProps = ({ categories }) => ({ categories })
 

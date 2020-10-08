@@ -21,6 +21,8 @@ export const fetchItems = () => {
     }
 }
 
-// export const deleteItem = () {
-
-// }
+export const deleteItem = (item) => {
+    return {
+        type: 'DELETE_ITEM', item
+    }
+}

@@ -13,9 +13,8 @@ export const itemsReducer = (state = { items: [] }, action) => {
                 ]
             }
         case 'DELETE_ITEM': 
-            return {
-                items: state.items.filter(i => i !== action.item)
-            }
+        console.log("state in delete item", state)
+            return {items: state.items.filter(i => i.id !== action.item)}
         default: 
             return state
     }
