@@ -26,12 +26,6 @@ class CategoriesContainer extends Component {
     }
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         categories: state.categories
-//     }
-// }
-
 const mapStateToProps = ({ categories }) => ({ categories })
 
 export default connect(mapStateToProps, { fetchCategories })(CategoriesContainer);
