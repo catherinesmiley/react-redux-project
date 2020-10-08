@@ -7,6 +7,7 @@ export const itemsReducer = (state = { items: [], loading: false }, action) => {
             }
         case 'ADD_ITEM': 
         console.log("action in add item", action)
+        console.log("state in add item", state)
             return {
                 ...state,
                 items: [

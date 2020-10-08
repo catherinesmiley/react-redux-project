@@ -3,11 +3,13 @@ export const fetchCategories = () => {
         dispatch({ type: 'LOADING_CATEGORIES' })
         fetch('http://localhost:3090/categories')
         .then(resp => resp.json())
-        .then(responseJSON => dispatch({ type: 'FETCH_CATEGORIES', categories: responseJSON }, { type: 'FETCH_ITEMS', items: responseJSON.items }))
+        .then(responseJSON => {
+            dispatch({ type: 'FETCH_CATEGORIES', categories: responseJSON })
+            dispatch({ type: 'FETCH_ITEMS', items: responseJSON.items })
+        })
     }
 }
 
-// let nextCategoryId = 2
 export const addCategory = category => {
     console.log("category in action", category)
     return dispatch => {
@@ -23,6 +25,5 @@ export const addCategory = category => {
         })
         .then(resp => resp.json())
         .then(responseJSON => dispatch({ type: 'ADD_CATEGORY', category}))
-        // id: nextCategoryId++,
     }
 }

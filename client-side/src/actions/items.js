@@ -13,3 +13,11 @@ export const addItem = item => {
         .then(responseJSON => dispatch({ type: 'ADD_ITEM', item}))
     }
 }
+
+export const fetchItems = () => {
+    return dispatch => {
+        fetch('http://localhost:3090/items')
+        .then(resp => resp.json())
+        .then(responseJSON => dispatch({ type: 'FETCH_ITEMS', items: responseJSON }))
+    }
+}
