@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CategoryItems = props => {
-    console.log("props in category items", props)
     let items = props.items.filter(i => i.category_id === props.categoryID)
     return (
         <div>

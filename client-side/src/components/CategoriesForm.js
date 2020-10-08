@@ -20,10 +20,17 @@ class CategoriesForm extends Component {
         const category = {
             name: this.state.name,
             description: this.state.description
-            // add id? 
         }
 
         this.props.addCategory(category)
+        this.resetForm()
+    }
+
+    resetForm = () => {
+        this.setState({
+            name: "",
+            description: ""
+        })
     }
 
     render() {

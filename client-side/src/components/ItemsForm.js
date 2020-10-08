@@ -9,8 +9,8 @@ class ItemsForm extends Component {
         this.state = {
             name: "", 
             category_id: this.props.categoryID
+        }
     }
-}
 
     handleOnChange = event => {
         this.setState({
@@ -22,11 +22,17 @@ class ItemsForm extends Component {
         event.preventDefault()
         const item = {
             name: this.state.name,
-            // add id?
             category_id: this.props.categoryID
         }
-        console.log("item on submit", item)
         this.props.addItem(item)
+        this.resetForm()
+    }
+
+    resetForm = () => {
+        this.setState({
+            name: "", 
+            category_id: this.props.categoryID
+        })
     }
 
     render() {

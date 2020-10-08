@@ -13,8 +13,6 @@ export const categoriesReducer = (state = { categories: [], loading: false }, ac
                 loading: false
             }
         case 'ADD_CATEGORY': 
-        console.log("action in add category", action)
-        console.log("state in add category", state)
             return {
                 ...state,
                 categories: [

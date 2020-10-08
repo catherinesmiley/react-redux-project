@@ -8,7 +8,6 @@ export const fetchCategories = () => {
 }
 
 export const addCategory = category => {
-    console.log("category in action", category)
     return dispatch => {
         // dispatch({ type: 'LOADING_CATEGORIES' })
         fetch('http://localhost:3090/categories', {

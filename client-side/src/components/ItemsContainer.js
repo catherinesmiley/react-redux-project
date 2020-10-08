@@ -8,11 +8,9 @@ class ItemsContainer extends Component {
 
     componentDidMount() {
         this.props.fetchItems()
-        // console.log("props in items container", this.props)
     }
 
     render() {
-        console.log("props in items container", this.props)
         return (
             <div>
                 <CategoryItems categoryID={this.props.category.id} items={this.props.items} />
@@ -27,7 +25,4 @@ const mapStateToProps = state => {
         items: state.items.items
     }
 }
-
-// const mapStateToProps = ({ items }) => ({ items })
-
 export default connect(mapStateToProps, { fetchItems })(ItemsContainer);
