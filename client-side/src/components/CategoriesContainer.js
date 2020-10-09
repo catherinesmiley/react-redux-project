@@ -20,7 +20,6 @@ class CategoriesContainer extends Component {
                     <Route exact path="/categories/new" component={CategoriesForm} />
                     <Route exact path="/categories/:id" render={(props) => <Category {...props} categories={this.props.categories} />} />
                 </Switch>
-                {/* create routes in container component when they're nested */}
             </div>
         );
     }

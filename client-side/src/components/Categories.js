@@ -7,8 +7,6 @@ const Categories = props => {
             <Link
                 to={`/categories/${category.id}`}
             ><h2>{category.name}</h2></Link>
-            {/* conditional if no category name */}
-            {/* add validations to category model */}
             <h4>{category.description}</h4>
         </div>
     })

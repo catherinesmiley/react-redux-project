@@ -24,10 +24,8 @@ export const fetchItems = () => {
 }
 
 export const deleteItem = item => {
-    console.log("item in delete item action", item)
     return dispatch => {
         dispatch({ type: 'DELETE_ITEM', item })
-        // if you call dispatch after fetch, fetch might finish before or after dispatch runs
         fetch(`${BASE_URL}${item.id}`, {
             method: "DELETE",
         })

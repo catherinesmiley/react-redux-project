@@ -20,12 +20,6 @@ class ItemsContainer extends Component {
     }
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         delete: itemText => dispatch({ type: 'DELETE_ITEM', payload: itemText })
-//     }
-// }
-
 const mapStateToProps = state => {
     return {
         items: state.items.items
