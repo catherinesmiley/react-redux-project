@@ -24,19 +24,12 @@ class CategoriesForm extends Component {
         }
 
         this.props.addCategory(category)
-        this.resetForm()
+        this.redirectToIndex()
     }
 
-    resetForm = () => {
-        this.setState({
-            name: "",
-            description: ""
-        })
+    redirectToIndex = () => {
+        window.location.href = "/categories"
     }
-
-    // redirectToIndex = () => {
-    //     window.location.href = "http://localhost:3090/categories"
-    // }
 
     render() {
         return (
