@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addCategory } from '../actions/categories'
+import { Route } from 'react-router-dom'
 
 class CategoriesForm extends Component {
 
@@ -32,6 +33,10 @@ class CategoriesForm extends Component {
             description: ""
         })
     }
+
+    // redirectToIndex = () => {
+    //     window.location.href = "http://localhost:3090/categories"
+    // }
 
     render() {
         return (

@@ -10,7 +10,7 @@ const Category = ({ match, categories }) => {
     return (
         <>
         <div>
-            {category.name}
+            <h2>{category.name}</h2>
             <ItemsContainer category={category}/>
         </div>
         </>
