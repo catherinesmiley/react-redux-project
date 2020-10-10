@@ -1,5 +1,3 @@
-/* @import url('https://fonts.google.com/specimen/Fjalla+One?category=Sans+Serif,Handwriting'); */
-
 .nav {
     margin: 0;
     padding: 0;
@@ -9,26 +7,23 @@
 
 .nav li {
     display: inline-block;
-    /* padding: 20px; */
 }
 
 .nav a:hover {
-    color: #6b856d;
+    color: #dd9587;
     text-decoration: none;
 }
 
 .nav a:link {
-    /* color: aqua; */
     text-decoration: none;
 }
 
 .nav a:visited {
-    /* color: aqua; */
     text-decoration: none;
 }
 
 .catList a:hover {
-    color: #6b856d;
+    color: #dd9587;
     text-decoration: none;
 }
 
@@ -39,7 +34,6 @@
 
 h2 {
     color: #6b856d;
-    /* font-family: 'Fjalla One' */
 }
 
 h1 {
@@ -58,4 +52,22 @@ body {
 
 h4 {
     color: #0b2345
+}
+
+input[type=text] {
+    padding: 4px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 0px;
+    outline: none;
+    font-family: 'Nanum Pen Script', cursive;
+    /* border-radius: 4px; */
+}
+
+input[type=text]:focus {
+    border: 3px solid #dd9587;
+  }
+
+input[type=submit] {
+    font-family: 'Nanum Pen Script', cursive;
 }
