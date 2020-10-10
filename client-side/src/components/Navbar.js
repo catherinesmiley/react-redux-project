@@ -4,22 +4,24 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
     return (
         <div>
-            <NavLink
-                to="/"
-                exact
-            >Home</NavLink>
-            <br />
-            <NavLink 
-                to="/categories"
-                exact
-            >All Categories</NavLink>
-            <br />
-            <NavLink
-                to="/categories/new"
-                exact
-            >Create New Category</NavLink>
-            <br />
-            <br />
+            <ul className="nav">
+                <li><NavLink
+                    to="/"
+                    exact
+                >Home</NavLink></li>
+                <br />
+                <li><NavLink 
+                    to="/categories"
+                    exact
+                >All Categories</NavLink></li>
+                <br />
+                <li><NavLink
+                    to="/categories/new"
+                    exact
+                >Create New Category</NavLink></li>
+                <br />
+                <br />
+            </ul>
         </div>
     );
 };
