@@ -11,16 +11,44 @@
 }
 
 .nav a:hover {
-    color: green;
+    color: #6b856d;
     text-decoration: none;
 }
 
 .nav a:link {
+    /* color: aqua; */
+    text-decoration: none;
+}
+
+.nav a:visited {
+    /* color: aqua; */
+    text-decoration: none;
+}
+
+.catList a:hover {
+    color: #6b856d;
+    text-decoration: none;
+}
+
+.catList a:link {
     color: aqua;
     text-decoration: none;
 }
 
-/* .nav a:visited {
-    color: aqua;
-    text-decoration: none;
-} */
+h2 {
+    color: #6b856d;
+    font-family: 'Anton'
+}
+
+h1 {
+    color: #6b856d
+}
+
+body {
+    background-color: #f4e0a2;
+    text-align: center;
+}
+
+h4 {
+    color: #0b2345
+}
