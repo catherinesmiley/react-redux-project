@@ -1,3 +1,5 @@
+/* @import url('https://fonts.google.com/specimen/Fjalla+One?category=Sans+Serif,Handwriting'); */
+
 .nav {
     margin: 0;
     padding: 0;
@@ -37,16 +39,21 @@
 
 h2 {
     color: #6b856d;
-    font-family: 'Anton'
+    /* font-family: 'Fjalla One' */
 }
 
 h1 {
     color: #6b856d
 }
 
+p {
+    color: #0b2345
+}
+
 body {
     background-color: #f4e0a2;
     text-align: center;
+    font-family: 'Nanum Pen Script', cursive;
 }
 
 h4 {
