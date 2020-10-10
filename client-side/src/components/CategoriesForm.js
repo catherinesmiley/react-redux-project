@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addCategory } from '../actions/categories'
-import { Route } from 'react-router-dom'
 
 class CategoriesForm extends Component {
 

@@ -1,6 +1,5 @@
 export const fetchCategories = () => {
     return dispatch => {
-        dispatch({ type: 'LOADING_CATEGORIES' })
         fetch('http://localhost:3090/categories')
         .then(resp => resp.json())
         .then(responseJSON => dispatch({ type: 'FETCH_CATEGORIES', categories: responseJSON }))
@@ -9,7 +8,6 @@ export const fetchCategories = () => {
 
 export const addCategory = category => {
     return dispatch => {
-        // dispatch({ type: 'LOADING_CATEGORIES' })
         fetch('http://localhost:3090/categories', {
             method: "POST",
             headers: {
