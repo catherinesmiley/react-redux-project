@@ -48,6 +48,8 @@ body {
     background-color: #f4e0a2;
     text-align: center;
     font-family: 'Nanum Pen Script', cursive;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 h4 {
@@ -55,7 +57,9 @@ h4 {
 }
 
 h3 {
-    color: #0b2345
+    color: #0b2345;
+    /* font-family: 'Nanum Gothic', sans-serif;
+    font-size: small; */
 }
 
 input[type=text] {
