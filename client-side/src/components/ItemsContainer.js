@@ -11,6 +11,7 @@ class ItemsContainer extends Component {
     }
 
     render() {
+        console.log("props in items container", this.props)
         return (
             <div>
                 <CategoryItems categoryID={this.props.category.id} items={this.props.items} deleteItem={this.props.deleteItem} />
