@@ -23,6 +23,7 @@ class CategoriesForm extends Component {
         }
 
         this.props.addCategory(category)
+        // pass this.state instead of creating category variable?
         this.redirectToIndex()
     }
 

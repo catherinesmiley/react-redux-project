@@ -11,7 +11,7 @@ export const addItem = item => {
             body: JSON.stringify(item)
         })
         .then(resp => resp.json())
-        .then(item => dispatch({ type: 'ADD_ITEM', item}))
+        .then(item => dispatch({ type: 'ADD_ITEM', item }))
     }
 }
 
@@ -19,7 +19,7 @@ export const fetchItems = () => {
     return dispatch => {
         fetch(`${BASE_URL}`)
         .then(resp => resp.json())
-        .then(responseJSON => dispatch({ type: 'FETCH_ITEMS', items: responseJSON }))
+        .then(items => dispatch({ type: 'FETCH_ITEMS', items }))
     }
 }
 

@@ -11,7 +11,6 @@ class ItemsContainer extends Component {
     }
 
     render() {
-        console.log("props in items container", this.props)
         return (
             <div>
                 <CategoryItems categoryID={this.props.category.id} items={this.props.items} deleteItem={this.props.deleteItem} />
@@ -21,9 +20,6 @@ class ItemsContainer extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        items: state.items.items
-    }
-}
+const mapStateToProps = ({ items }) => ({ items })
+
 export default connect(mapStateToProps, { fetchItems, deleteItem })(ItemsContainer);

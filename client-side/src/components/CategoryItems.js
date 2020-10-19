@@ -5,9 +5,10 @@ const CategoryItems = props => {
     
     return (
         <div>
-            {items.map(function(item, index) {
+            {/* is index needed? */}
+            {items.map((item, index) => {
                 return (<p key={item.id}>{item.name} <button onClick={() => props.deleteItem(item)}>✓</button></p>)
-            })}    
+            })}  
         </div>
     );
 };

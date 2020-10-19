@@ -2,9 +2,10 @@ import React from 'react';
 import ItemsContainer from './ItemsContainer'
 
 const Category = ({ match, categories }) => {
-    let category = categories.categories.find(c => c.id === parseInt(match.params.id))
+    // try useParams instead and delete the props being passed in to render method in CategoriesContainer
+    let category = categories.find(c => c.id === parseInt(match.params.id))
 
-    if (categories.categories.length === 0) return null 
+    if (categories.length === 0) return null 
     
     return (
         <>

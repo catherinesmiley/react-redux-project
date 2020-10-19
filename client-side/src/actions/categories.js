@@ -2,7 +2,7 @@ export const fetchCategories = () => {
     return dispatch => {
         fetch('http://localhost:3090/categories')
         .then(resp => resp.json())
-        .then(responseJSON => dispatch({ type: 'FETCH_CATEGORIES', categories: responseJSON }))
+        .then(categories => dispatch({ type: 'FETCH_CATEGORIES', categories }))
     }
 }
 
