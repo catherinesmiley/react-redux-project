@@ -8,7 +8,6 @@ class ItemsContainer extends Component {
 
     componentDidMount() {
         this.props.fetchItems()
-        // fetchcategories instead?
     }
 
     render() {

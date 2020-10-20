@@ -13,7 +13,6 @@ class CategoriesContainer extends Component {
     }
 
     render() {
-        console.log("props in CategoriesContainer", this.props)
         return (
             <div>
                 <Switch>

@@ -1,13 +1,12 @@
 import React from 'react';
 
-const CategoryItems = props => {
-    let items = props.items.filter(i => i.category_id === props.categoryID)
+const CategoryItems = ({ categoryID, items, deleteItem }) => {
+    let itemsList = items.filter(i => i.category_id === categoryID)
 
     return (
         <div>
-            {/* is index needed? */}
-            {items.map((item, index) => {
-                return (<p key={item.id}>{item.name} <button onClick={() => props.deleteItem(item)}>✓</button></p>)
+            {itemsList.map(item => {
+                return (<p key={item.id}>{item.name} <button onClick={() => deleteItem(item)}>✓</button></p>)
             })}  
         </div>
     );
