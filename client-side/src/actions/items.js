@@ -24,10 +24,8 @@ export const fetchItems = () => {
 }
 
 export const deleteItem = item => {
-    return dispatch => {
-        dispatch({ type: 'DELETE_ITEM', item })
-        fetch(`${BASE_URL}${item.id}`, {
-            method: "DELETE",
-        })
+    return {
+        type: 'DELETE_ITEM', 
+        item
     }
 }

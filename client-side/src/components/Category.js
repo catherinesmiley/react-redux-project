@@ -10,10 +10,8 @@ const Category = ({ categories }) => {
     
     return (
         <>
-        <div>
             <h2>{cat.name}</h2>
             <ItemsContainer category={cat}/>
-        </div>
         </>
     );
 };
