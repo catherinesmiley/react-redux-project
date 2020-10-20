@@ -13,10 +13,11 @@ class CategoriesContainer extends Component {
     }
 
     render() {
+        console.log("props in CategoriesContainer", this.props)
         return (
             <div>
                 <Switch>
-                    <Route exact path="/categories" render={(props) => <Categories {...props} categories={this.props.categories} />} />
+                    <Route exact path="/categories" render={() => <Categories categories={this.props.categories} />} />
                     <Route exact path="/categories/new" component={CategoriesForm} />
                     <Route exact path="/categories/:id" render={(props) => <Category {...props} categories={this.props.categories} />} />
                 </Switch>

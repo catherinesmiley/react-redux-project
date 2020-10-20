@@ -7,9 +7,11 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import App from './App'
 import { rootReducer } from './reducers/rootReducer'
+// import { categoriesReducer } from './reducers/categoriesReducer'
 
 const store = createStore(
     rootReducer,
+    // categoriesReducer,
     composeWithDevTools(applyMiddleware(thunk))
 )
 
