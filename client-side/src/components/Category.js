@@ -1,17 +1,18 @@
 import React from 'react';
 import ItemsContainer from './ItemsContainer'
+import { useParams } from 'react-router-dom'
 
-const Category = ({ match, categories }) => {
-    // try useParams instead and delete the props being passed in to render method in CategoriesContainer
-    let category = categories.find(c => c.id === parseInt(match.params.id))
+const Category = ({ categories }) => {
+    const { id } = useParams()
+    const cat = categories.find(c => c.id === parseInt(id))
 
     if (categories.length === 0) return null 
     
     return (
         <>
         <div>
-            <h2>{category.name}</h2>
-            <ItemsContainer category={category}/>
+            <h2>{cat.name}</h2>
+            <ItemsContainer category={cat}/>
         </div>
         </>
     );

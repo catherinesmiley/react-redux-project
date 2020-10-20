@@ -18,7 +18,7 @@ class CategoriesContainer extends Component {
                 <Switch>
                     <Route exact path="/categories" render={() => <Categories categories={this.props.categories} />} />
                     <Route exact path="/categories/new" component={CategoriesForm} />
-                    <Route exact path="/categories/:id" render={(props) => <Category {...props} categories={this.props.categories} />} />
+                    <Route exact path="/categories/:id" render={() => <Category categories={this.props.categories} />} />
                 </Switch>
             </div>
         );
